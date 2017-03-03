@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+image{border:0;}
+.roll{height:200px;width: 790px;position:relative;margin: 50px auto 0;}
+.button-left{width:95px;height:97px;display: block ;background: url("images/bg1.png") no-repeat;position: absolute;top: 50px;left: 0;
+    z-index: 1;}
+li a:hover{position: relative ;top:2px;}
+.button-right{width:95px;height:96px;display: block ;background: url("images/bg2.png") no-repeat;position: absolute;top: 50px;right: 0;
+    z-index: 1;}
+
+.roll .wrap {width:600px;height:200px;overflow:hidden;position: relative ;margin: 0 auto;}
+.roll ul{position:absolute;top: 0;left: 0;width:600px;height:200px;}
+li{width: 200px;height:200px;float: left;text-align: center;}

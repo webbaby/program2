@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qq延时提示框</title>
+    <style>
+        #div1{width: 274px;height:200px ;background: url("1.png") no-repeat;position: absolute;display: none ;margin-top: 30px;}
+        #div2{width: 287px;height: 145px;background:url("bg.png ") no-repeat; margin-left:284px;}
+        img{margin-top: 45px;margin-left:10px;}
+    </style>
+    <script type="text/javascript">
+         window.onload=function(){
+             var oDiv1=document.getElementById ('div1');
+             var oDiv2=document.getElementById ('div2');
+             var oImg=oDiv2.getElementsByTagName('a');
+             var timer=null;
+
+             oImg[0].onmouseover =function() {
+                 timer = setTimeout(function () {
+                     oDiv1.style.display = "block";
+                 }, 500);
+
+                };
+                 oImg[0].onmouseout =function(){
+                     timer=setTimeout(function(){
+                         oDiv1.style.display="none";
+                     },500);
+                 };
+                oDiv1.onmouseover=function(){
+
+                        oDiv1.style.display = "block";
+                    clearInterval(timer);
+                };
+             oDiv1.onmouseout=function(){
+                 timer = setTimeout(function () {
+                     oDiv1.style.display = "none";
+                 }, 500);
+             };
+
+
+         }
+    </script>
+</head>
+<body>
+     <div id="div1"></div>
+     <div id="div2"><a href="#"><img src="hg.png "/></a></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{padding:0;margin: 0;font-size: 10px;list-style: none;}
+.top-menu{display:block;width: 220px;border:2px solid #e4393c;margin: 0;padding: 0;}
+.top-title{height:40px;line-height:40px;font-size: 11px;font-weight: bold;text-align: left;padding-left: 20px;
+    color: #000;background: #e4393c;}
+.top-menu li{list-style-type: none;font-size:11px ;height:30px;line-height:30px;text-align: left;padding-left: 8px;z-index: 3;
+    background:url("http://img.mukewang.com/5411027300014f0200220030.jpg") no-repeat right;}
+.top-menu li a{color:#313131;text-decoration: none;}
+.top-menu li:hover{background:none;border: 1px solid #DDD;border-right: 0;box-shadow: 0 0 8px #DDD;-moz-box-shadow: 0 0 8px #DDD;-webkit-box-shadow: 0 0 8px #DDD; }
+.top-menu a:hover{color: #e4393c;text-decoration: underline;}
+.sub-menu{width:715px;display:none;left:220px;position:absolute;top:40px;border: 1px solid #DDDDDD;
+    background: white;z-index: 4;box-shadow: 0 0 8px #DDD;-moz-box-shadow: 0 0 8px #DDD;-webkit-box-shadow: 0 0 8px #DDD;}
+.divLeft {float: left;width: 490px;}
+.divRight{float: right;width:200px;}
+.top-menu li:hover .sub-menu{display: block;}
+.top-menu li:hover span{background: white;height: 30px;display:inline-block;z-index: 6;width: 20px;float: right;position: relative; }
+.divLeft dl{display: block;border-bottom: 1px solid #EEE;padding-bottom: 6px;overflow:hidden;}
+.divLeft dl dt{display:block;width:60px;float: left;text-align: right;height:22px;line-height:22px;padding-right: 6px; }
+.divLeft dl dt a{color: #e4393c;text-decoration: underline;font-size:10px;font-weight:bold;}
+.divLeft dl dd{display: block;overflow: hidden;}
+.divLeft dl dd a{display: block;border-left: 1px solid #CCC;font-size: 9px;height: 14px;line-height: 14px;float: left;
+color:#737373;padding:0 8px;margin:4px 0;}
+.divRight table{display: block;border: 1px solid white;}
+.divRight table tr{display: block;height:40px;}
+.divRight dl{display:block;width:168px;margin-top: 50px;}
+.divRight dl dd{display: block;margin: 2px 5px;}

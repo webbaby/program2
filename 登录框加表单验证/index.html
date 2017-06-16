@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录框</title>
+    <link rel="stylesheet" href="css/cs1.css" type="text/css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.validate-1.13.1.js"></script>
+    <script src="js/form.js"></script>
+</head>
+<body>
+<header>
+    <div class="head">
+
+        <ul>
+            <li><a href="#" class="signIn">登录</a></li>
+            <li><a href="#" class="signUp">注册</a></li>
+        </ul>
+    </div>
+    <div class="signForm">
+        <div class="closebutton"><img src="img/close.png"/></div>
+            <h2 class="title">基本信息填写</h2>
+            <form action="#" method="post" class="form1">
+            <div class="adiv">
+                <label for="username">用户名：</label>
+                <input id="username" type="text" name="username"/>
+            </div>
+
+            <div class="adiv">
+                <label for="cemail">email：</label>
+                <input id="cemail"  name="email"/>
+            </div>
+            <div class="adiv">
+                <label for="pass">密码：</label>
+                <input id="pass" type="password" name="password"/>
+            </div>
+            <div class="adiv">
+                <label for="repass">确认密码：</label>
+                <input id="repass" type="password" />
+            </div>
+            <div class="sub">
+                <input type="submit" class="sbm" value="提交"/>
+            </div>
+        </form>
+    </div>
+</header>
+</body>
+</html>

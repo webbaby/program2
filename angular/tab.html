@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        .tabs{margin: 0 auto;width: 340px;}
+        a{display: inline-block;width: 80px;height: 30px;line-height: 30px;text-align: center;background: #DDA017;text-decoration: none;}
+        .cont{width: 340px;}
+        .active{background: red;}
+    </style>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="Tabs">
+   <div class="tabs" ng-controller="tabController">
+       <nav>
+           <a href="#" ng-class="{active: type=='china'}" ng-click="switch('china')" >国内新闻</a>
+           <a href="#" ng-click="switch('nation')" ng-class="{active:type=='nation'}">国际新闻</a>
+           <a href="#" ng-click="switch('funny')" ng-class="{active:type=='funny'}">娱乐新闻</a>
+           <a href="#" ng-click="switch('sports')" ng-class="{active:type=='sports'}">体育新闻</a>
+       </nav>
+       <div ng-switch on="type">
+       <section class="cont" id="china" ng-switch-when="china">
+           <ol>
+               <li>
+                   国内的事件1
+               </li>
+               <li>
+                   国内的事件2
+               </li>
+               <li>
+                   事件3
+               </li>
+               <li>
+                   事件4
+               </li>
+           </ol>
+       </section>
+       <section class="cont" id="nation" ng-switch-when="nation">
+           <ol>
+               <li>
+                   国际的事件1
+               </li>
+               <li>
+                   国际的事件2
+               </li>
+               <li>
+                   事件5
+               </li>
+               <li>
+                   事件6
+               </li>
+           </ol>
+       </section>
+       <section class="cont" id="funny" ng-switch-when="funny">
+           <ol>
+               <li>
+                   赵丽因
+               </li>
+               <li>
+                   杨幂
+               </li>
+               <li>
+                   范冰冰
+               </li>
+               <li>
+                   鹿晗
+               </li>
+           </ol>
+       </section>
+       <section class="cont" id="sports" ng-switch-when="sports">
+           <ol>
+               <li>
+                   足球
+               </li>
+               <li>
+                   篮球
+               </li>
+               <li>
+                   网球
+               </li>
+               <li>
+                   乒乓球
+               </li>
+           </ol>
+       </section>
+       </div>
+   </div>
+<script>
+    var Tabs=angular.module("Tabs",[]);
+    Tabs.controller("tabController",["$scope",function($scope){
+        $scope.switch=function(type){
+            $scope.type=type;
+           // $scope.key=type;
+        }
+    }])
+
+</script>
+</body>
+</html>

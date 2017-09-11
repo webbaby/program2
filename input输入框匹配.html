@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>input</title>
+    <style>
+        *{ margin:0;  padding:0;  }
+        #frm{width:300px; margin:100px auto;  }
+        #put{width:200px;  height:30px;}
+        #sh{width:200px;  border:1px solid red;}
+        #sh li{list-style:none;}
+    </style>
+
+</head>
+<body>
+    
+        <form id="frm">
+            <input type="text" name="put" id="put" value="请输入内容" />
+          </form>
+         <ul id="sh">
+                   <li></li>
+           </ul>
+        
+</body>
+<script>
+    window.onload=function(){
+        var frm=document.getElementById("frm");
+        var input=document.getElementById("put");
+        var ul=document.getElementById("sh");
+        //alert(input.offsetLeft);
+        //alert(input.offsetTop);
+        ul.style.position="absolute";
+        ul.style.top=(input.offsetTop+33)+'px';
+        ul.style.left=input.offsetLeft+'px';
+        ul.style.height='200px';
+        var arr=["a","aa","aaa","b","bb","bbb"];
+        //alert(input.value);
+
+
+        input.onkeyup=function(){
+            //根据输入匹配，并将所有匹配显示出来
+            ul.innerHTML="";
+            var str=input.value;
+            //alert(str);
+            var regStr = eval("/^"+str+"+/");
+            for(var i=0;i<arr.length;i++){
+                //alert(arr[i]);
+                if(regStr.test(arr[i])){
+                    //alert(arr[i])
+                    ul.style.display='block';
+                    var li=document.createElement("li");
+                    //alert(li);
+                    //匹配的部分内容变粗
+                    var len=str.length;
+                    var string=arr[i].substr(len);
+                    li.innerHTML='<strong>'+str+'</strong>'+string;
+                    //alert(li.innerText);
+                    ul.appendChild(li);
+                    //alert("sd");
+                }
+            }
+
+
+            //用鼠标选择li中的内容，并把input的内容替换为选中的值
+            var lis=document.getElementsByTagName("li");
+            //alert(lis.length);
+            for(var j=0;j<lis.length;j++){
+                lis[j].onmouseover=function(){
+                    this.style.backgroundColor="#eee";
+                };
+                lis[j].onmouseout=function(){
+                    this.style.backgroundColor="#fff";
+                };
+                lis[j].onclick=function(){
+                    //alert(this.innerHTML);
+                    input.value=this.innerText||this.textContent;
+                    ul.style.display='none';
+                }
+            }
+
+        }
+
+
+    }
+</script>
+</html>
